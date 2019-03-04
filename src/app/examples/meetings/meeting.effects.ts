@@ -1,21 +1,15 @@
 import { Injectable } from '@angular/core';
 import { LocalStorageService } from '@app/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
-import { Action } from '@ngrx/store';
-import { Observable, of as observableOf } from 'rxjs';
+import { asyncScheduler, of } from 'rxjs';
+import { catchError, debounceTime, map, switchMap, tap } from 'rxjs/operators';
 import {
-  catchError,
-  debounceTime,
-  map,
-  switchMap,
-  tap,
-  distinctUntilChanged,
-  mergeMap,
-  startWith
-} from 'rxjs/operators';
-import * as meetingActions from './meeting.actions';
+  ActionLoadMeetingsFail,
+  ActionLoadMeetingsSuccess,
+  ActionMeetingLoad,
+  MeetingActionTypes
+} from './meeting.actions';
 import { MeetingService } from './meeting.service';
-import { Meeting } from '@app/examples/meetings/meeting.model';
 
 export const MEETING_KEY = 'EXAMPLES.MEETINGS';
 
@@ -27,24 +21,37 @@ export class MeetingEffects {
     private service: MeetingService
   ) {}
 
+  // loadRequestEffect$: Observable<Action> = this.actions$.pipe(
+  //   ofType<meetingActions.ActionMeetingLoad>(
+  //     meetingActions.MeetingActionTypes.LOAD_MEETINGS
+  //   ),
+  //   startWith(new meetingActions.ActionMeetingLoad()),
+  //   switchMap(action =>
+  //     this.service.retrieveAllMeetings().pipe(
+  //       map(
+  //         meetings =>
+  //           new meetingActions.ActionLoadMeetingsSuccess({
+  //             meetings
+  //           })
+  //       ),
+  //       catchError(error =>
+  //         observableOf(new meetingActions.ActionLoadMeetingsFail({ error }))
+  //       )
+  //     )
+  //   )
+  // );
+
   @Effect()
-  loadRequestEffect$: Observable<Action> = this.actions$.pipe(
-    ofType<meetingActions.ActionMeetingLoad>(
-      meetingActions.MeetingActionTypes.LOAD_MEETINGS
-    ),
-    startWith(new meetingActions.ActionMeetingLoad()),
-    switchMap(action =>
-      this.service.retrieveAllMeetings().pipe(
-        map(
-          meetings =>
-            new meetingActions.ActionLoadMeetingsSuccess({
-              meetings
-            })
-        ),
-        catchError(error =>
-          observableOf(new meetingActions.ActionLoadMeetingsFail({ error }))
+  retrieveMeetings = ({ debounce = 500, scheduler = asyncScheduler } = {}) =>
+    this.actions$.pipe(
+      ofType<ActionMeetingLoad>(MeetingActionTypes.LOAD_MEETINGS),
+      tap(action => this.localStorageService.setItem(MEETING_KEY, {})),
+      debounceTime(debounce, scheduler),
+      switchMap((action: ActionMeetingLoad) =>
+        this.service.retrieveAllMeetings().pipe(
+          map(meetings => new ActionLoadMeetingsSuccess({ meetings })),
+          catchError(error => of(new ActionLoadMeetingsFail({ error })))
         )
       )
-    )
-  );
+    );
 }
