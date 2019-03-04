@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError, of } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
+import { MEETINGS } from './mock-meetings';
 
 import { Meeting } from './meeting.model';
 
@@ -16,11 +17,14 @@ export class MeetingService {
   constructor(private http: HttpClient) {}
 
   retrieveAllMeetings(): Observable<Meeting[]> {
-    return this.http.get<Meeting[]>(PROXY_URL).pipe(
-      tap(data => console.log(JSON.stringify(data))),
-      catchError(this.handleError)
-    );
+    return MEETINGS;
   }
+  // retrieveAllMeetings(): Observable<Meeting[]> {
+  //   return this.http.get<Meeting[]>(PROXY_URL).pipe(
+  //     tap(data => console.log(JSON.stringify(data))),
+  //     catchError(this.handleError)
+  //   );
+  // }
 
   retrieveMeeting(id: number): Observable<Meeting> {
     return this.http.get<Meeting>(PROXY_URL + `${id}`).pipe(
