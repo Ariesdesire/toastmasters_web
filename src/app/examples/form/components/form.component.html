@@ -12,8 +12,8 @@
       <div class="col-md-8">
         <mat-card>
           <span class="d-flex justify-content-between align-items-baseline">
-            <h2>{{ 'anms.examples.form.subtitle1' | translate }}</h2>
-            <mat-slide-toggle formControlName="autosave">
+      <div class="branding"><img [src]="logo" />
+    </div>            <mat-slide-toggle formControlName="autosave">
               {{ 'anms.examples.form.autosave' | translate }}
             </mat-slide-toggle>
           </span>
@@ -48,17 +48,17 @@
                 {{ 'anms.examples.form.error2' | translate }}</mat-error>
             </mat-form-field>
           </div>
-          <div class="row">
-            <mat-form-field class="col" [ngClass]="routeAnimationsElements">
-              <input matInput formControlName="birthday" [matDatepicker]="picker" placeholder="{{ 'anms.examples.form.placeholder5' | translate }}">
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-              <mat-error *ngIf="form.get('birthday').hasError('required')">
-                {{ 'anms.examples.form.placeholder5' | translate }}
-                {{ 'anms.examples.form.error1' | translate }}
-              </mat-error>
-            </mat-form-field>
-          </div>
+          <!--<div class="row">-->
+            <!--<mat-form-field class="col" [ngClass]="routeAnimationsElements">-->
+              <!--<input matInput formControlName="birthday" [matDatepicker]="picker" placeholder="{{ 'anms.examples.form.placeholder5' | translate }}">-->
+              <!--<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>-->
+              <!--<mat-datepicker #picker></mat-datepicker>-->
+              <!--<mat-error *ngIf="form.get('birthday').hasError('required')">-->
+                <!--{{ 'anms.examples.form.placeholder5' | translate }}-->
+                <!--{{ 'anms.examples.form.error1' | translate }}-->
+              <!--</mat-error>-->
+            <!--</mat-form-field>-->
+          <!--</div>-->
           <div class="row">
             <mat-form-field class="col" [ngClass]="routeAnimationsElements">
               <textarea matInput placeholder="{{ 'anms.examples.form.placeholder4' | translate }}"
@@ -80,13 +80,13 @@
               </mat-error>
             </mat-form-field>
           </div>
-          <div class="row" [ngClass]="routeAnimationsElements">
-            <div class="col">
-              <label>{{ 'anms.examples.form.text2' | translate }}</label>
-              <br>
-              <mat-slider thumbLabel tickInterval="1" min="1" max="10" formControlName="rating"></mat-slider>
-            </div>
-          </div>
+          <!--<div class="row" [ngClass]="routeAnimationsElements">-->
+            <!--<div class="col">-->
+              <!--<label>{{ 'anms.examples.form.text2' | translate }}</label>-->
+              <!--<br>-->
+              <!--<mat-slider thumbLabel tickInterval="1" min="1" max="10" formControlName="rating"></mat-slider>-->
+            <!--</div>-->
+          <!--</div>-->
           <div class="row">
             <mat-checkbox class="col" formControlName="requestGift" [ngClass]="routeAnimationsElements">
               {{ 'anms.examples.form.text1' | translate }}

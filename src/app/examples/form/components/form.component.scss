@@ -15,3 +15,21 @@ mat-slider {
 .buttons {
   margin: 20px 0px;
 }
+
+.branding {
+  cursor: pointer;
+  overflow: hidden;
+  padding-top: 4px;
+  text-overflow: ellipsis;
+
+  &.center {
+    text-align: center;
+  }
+
+  img {
+    position: relative;
+    top: -2px;
+    width: 144px;
+    height: 72px;
+  }
+}

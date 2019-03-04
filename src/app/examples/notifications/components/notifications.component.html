@@ -12,7 +12,25 @@
     </button>
     <p class="col-9">{{ 'anms.examples.notifications.default.description' | translate }}</p>
   </div>
+  <div class="row item" [ngClass]="routeAnimationsElements">
+    <button mat-raised-button class="col-3 default" (click)="default()">
+      {{ 'anms.examples.notifications.default.title' | translate }}
+    </button>
+    <p class="col-9">{{ 'anms.examples.notifications.default.description' | translate }}</p>
+  </div>
+  <div class="row item" [ngClass]="routeAnimationsElements">
+    <button mat-raised-button class="col-3 default" (click)="default()">
+      {{ 'anms.examples.notifications.default.title' | translate }}
+    </button>
+    <p class="col-9">{{ 'anms.examples.notifications.default.description' | translate }}</p>
+  </div>
 
+  <div class="row item" [ngClass]="routeAnimationsElements">
+    <button mat-raised-button class="col-3 information" (click)="info()">
+      {{ 'anms.examples.notifications.info.title' | translate }}
+    </button>
+    <p class="col-9">{{ 'anms.examples.notifications.info.description' | translate }}</p>
+  </div>
   <div class="row item" [ngClass]="routeAnimationsElements">
     <button mat-raised-button class="col-3 information" (click)="info()">
       {{ 'anms.examples.notifications.info.title' | translate }}
@@ -39,6 +57,18 @@
       {{ 'anms.examples.notifications.error.title' | translate }}
     </button>
     <p class="col-9">{{ 'anms.examples.notifications.error.description' | translate }}</p>
+  </div>
+  <div class="row item" [ngClass]="routeAnimationsElements" >
+    <button mat-raised-button class="col-3 error" (click)="error()">
+      {{ 'anms.examples.notifications.error.title' | translate }}
+    </button>
+    <p class="col-9">{{ 'anms.examples.notifications.error.description' | translate }}</p>
+  </div>
+  <div class="row item" [ngClass]="routeAnimationsElements" >
+    <button mat-raised-button class="col-3 default-theme" (click)="error()">
+      {{ 'anms.examples.notifications.timer.title' | translate }}
+    </button>
+    <p class="col-9">{{ 'anms.examples.notifications.timer.description' | translate }}</p>
   </div>
 
 </div>

@@ -5,11 +5,22 @@ import { Todo, TodosState } from './todos.model';
 
 export const initialState: TodosState = {
   items: [
-    { id: uuid(), name: 'Open Todo list example', done: true },
-    { id: uuid(), name: 'Check the other examples', done: false },
     {
       id: uuid(),
-      name: 'Use Angular ngRx Material Starter in your project',
+      name:
+        'Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do -Pele',
+      done: true
+    },
+    {
+      id: uuid(),
+      name:
+        'If you want to be more productive, you need to become master of your minutes.-Crystal Paine.',
+      done: false
+    },
+    {
+      id: uuid(),
+      name:
+        'Appreciation is a wonderful thing; it makes what is excellent in others belong to us as well - Francois-Marie Arouet de Voltaire',
       done: false
     }
   ],

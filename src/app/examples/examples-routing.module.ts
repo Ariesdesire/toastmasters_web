@@ -10,6 +10,7 @@ import { TodosContainerComponent } from './todos/components/todos-container.comp
 import { StockMarketContainerComponent } from './stock-market/components/stock-market-container.component';
 import { CrudComponent } from './crud/components/crud.component';
 import { FormComponent } from './form/components/form.component';
+import { MeetingContainerComponent } from './meetings/components/meetings-container.component';
 import { NotificationsComponent } from './notifications/components/notifications.component';
 
 const routes: Routes = [
@@ -45,7 +46,17 @@ const routes: Routes = [
       {
         path: 'crud/:id',
         component: CrudComponent,
-        data: { title: 'anms.examples.menu.crud' }
+        data: { title: 'anms.examples.menu.meeting' }
+      },
+      {
+        path: 'meeting',
+        redirectTo: 'meeting/',
+        pathMatch: 'full'
+      },
+      {
+        path: 'meeting/:id',
+        component: MeetingContainerComponent,
+        data: { title: 'anms.examples.menu.meeting' }
       },
       {
         path: 'form',
@@ -57,6 +68,7 @@ const routes: Routes = [
         component: NotificationsComponent,
         data: { title: 'anms.examples.menu.notifications' }
       },
+
       {
         path: 'authenticated',
         component: AuthenticatedComponent,

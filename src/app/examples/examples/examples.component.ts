@@ -26,6 +26,7 @@ export class ExamplesComponent implements OnInit {
     { link: 'theming', label: 'anms.examples.menu.theming' },
     { link: 'crud', label: 'anms.examples.menu.crud' },
     { link: 'form', label: 'anms.examples.menu.form' },
+    { link: 'meeting', label: 'anms.examples.menu.meeting' },
     { link: 'notifications', label: 'anms.examples.menu.notifications' },
     { link: 'authenticated', label: 'anms.examples.menu.auth', auth: true }
   ];

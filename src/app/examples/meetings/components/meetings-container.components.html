@@ -1,0 +1,20 @@
+<h2>Club Meetings</h2>
+
+<!--<div>-->
+    <!--<label>Hero name:-->
+        <!--<input #heroName />-->
+    <!--</label>-->
+    <!--&lt;!&ndash; (click) passes input value to add() and then clears the input &ndash;&gt;-->
+    <!--<button (click)="add(heroName.value); heroName.value=''">-->
+        <!--add-->
+    <!--</button>-->
+<!--</div>-->
+
+<ul class="heroes">
+    <li *ngFor="let meeting of meetings$">
+        <a >
+            <span class="badge">{{meeting.id}}</span> {{meeting.theme}}
+        </a>
+
+    </li>
+</ul>

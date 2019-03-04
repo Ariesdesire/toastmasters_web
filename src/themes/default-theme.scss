@@ -1,5 +1,102 @@
-$anms-primary: mat-palette($mat-indigo, 800, 300, 900);
-$anms-accent: mat-palette($mat-light-blue);
-$anms-warn: mat-palette($mat-pink, 600);
-
+$md-blue: (
+  50: #e0e8ed,
+  100: #b3c6d1,
+  200: #80a0b2,
+  300: #4d7a93,
+  400: #265e7c,
+  500: #004165,
+  600: #003b5d,
+  700: #003253,
+  800: #002a49,
+  900: #001c37,
+  A100: #6ea8ff,
+  A200: #3b8aff,
+  A400: #086bff,
+  A700: #005fee,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+);
+$red: #cd202c;
+$md-red: (
+  50: #f9e4e6,
+  100: #f0bcc0,
+  200: #e69096,
+  300: #dc636b,
+  400: #d5414c,
+  500: #cd202c,
+  600: #c81c27,
+  700: #c11821,
+  800: #ba131b,
+  900: #ae0b10,
+  A100: #ffdbdc,
+  A200: #ffa8aa,
+  A400: #ff7578,
+  A700: #ff5c5f,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+$grey: #a9b2b1;
+$md-grey: (
+  50: #f5f6f6,
+  100: #e5e8e8,
+  200: #d4d9d8,
+  300: #c3c9c8,
+  400: #b6bebd,
+  500: #a9b2b1,
+  600: #a2abaa,
+  700: #98a2a1,
+  800: #8f9998,
+  900: #7e8a88,
+  A100: #ffffff,
+  A200: #e4fdf9,
+  A400: #affff2,
+  A700: #96ffed,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+$anms-primary: mat-palette($md-blue, 500);
+$anms-accent: mat-palette($md-grey, 500);
+$anms-warn: mat-palette($md-red, 500);
 $anms-theme: mat-light-theme($anms-primary, $anms-accent, $anms-warn);

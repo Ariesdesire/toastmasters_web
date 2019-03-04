@@ -1,7 +1,102 @@
-$anms-light-primary: mat-palette($mat-grey, 200, 500, 300);
-$anms-light-accent: mat-palette($mat-brown, 200);
-$anms-light-warn: mat-palette($mat-deep-orange, 200);
-
+$md-burgundy: (
+  50: #efe5e6,
+  100: #d6bdc2,
+  200: #bb9299,
+  300: #a06670,
+  400: #8b4551,
+  500: #772432,
+  600: #6f202d,
+  700: #641b26,
+  800: #5a161f,
+  900: #470d13,
+  A100: #ff808a,
+  A200: #ff4d5b,
+  A400: #ff1a2c,
+  A700: #ff0014,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+);
+$md-yellow: (
+  50: #fdfbee,
+  100: #fbf5d5,
+  200: #f9efba,
+  300: #f6e99e,
+  400: #f4e489,
+  500: #f2df74,
+  600: #f0db6c,
+  700: #eed761,
+  800: #ecd257,
+  900: #e8ca44,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #fff7d5,
+  A700: #fff2bc,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+$md-blue: (
+  50: #e0e8ed,
+  100: #b3c6d1,
+  200: #80a0b2,
+  300: #4d7a93,
+  400: #265e7c,
+  500: #004165,
+  600: #003b5d,
+  700: #003253,
+  800: #002a49,
+  900: #001c37,
+  A100: #6ea8ff,
+  A200: #3b8aff,
+  A400: #086bff,
+  A700: #005fee,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+);
+$anms-light-primary: mat-palette($md-burgundy, 500);
+$anms-light-accent: mat-palette($md-yellow, 500);
+$anms-light-warn: mat-palette($md-blue, 500);
 $anms-light-theme: mat-light-theme(
   $anms-light-primary,
   $anms-light-accent,

@@ -57,46 +57,46 @@ export const features: Feature[] = [
     documentation: 'https://getbootstrap.com/docs/4.0/layout/grid/',
     medium:
       'https://medium.com/@tomastrajan/how-to-build-responsive-layouts-with-bootstrap-4-and-angular-6-cfbb108d797b'
-  },
-  {
-    name: 'Typescript',
-    version: env.versions.typescript,
-    description: 'anms.features.typescript',
-    github: 'https://github.com/Microsoft/TypeScript',
-    documentation: 'https://www.typescriptlang.org/docs/home.html'
-  },
-  {
-    name: 'I18n',
-    version: env.versions.ngxtranslate,
-    description: 'anms.features.ngxtranslate',
-    github: 'https://github.com/ngx-translate/core',
-    documentation: 'http://www.ngx-translate.com/'
-  },
-  {
-    name: 'Font Awesome 5',
-    version: env.versions.fontAwesome,
-    description: 'anms.features.fontawesome',
-    github: 'https://github.com/FortAwesome/Font-Awesome',
-    documentation: 'https://fontawesome.com/icons'
-  },
-  {
-    name: 'Cypress',
-    version: env.versions.cypress,
-    description: 'anms.features.cypress',
-    github: 'https://github.com/cypress-io/cypress',
-    documentation: 'https://www.cypress.io/'
-  },
-  {
-    name: 'anms.features.themes.title',
-    description: 'anms.features.themes.description',
-    documentation: 'https://material.angular.io/guide/theming',
-    medium:
-      'https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1'
-  },
-  {
-    name: 'anms.features.lazyloading.title',
-    description: 'anms.features.lazyloading.description',
-    documentation:
-      'https://angular.io/guide/router#lazy-loading-route-configuration'
   }
+  // {
+  //   name: 'Typescript',
+  //   version: env.versions.typescript,
+  //   description: 'anms.features.typescript',
+  //   github: 'https://github.com/Microsoft/TypeScript',
+  //   documentation: 'https://www.typescriptlang.org/docs/home.html'
+  // },
+  // {
+  //   name: 'I18n',
+  //   version: env.versions.ngxtranslate,
+  //   description: 'anms.features.ngxtranslate',
+  //   github: 'https://github.com/ngx-translate/core',
+  //   documentation: 'http://www.ngx-translate.com/'
+  // },
+  // {
+  //   name: 'Font Awesome 5',
+  //   version: env.versions.fontAwesome,
+  //   description: 'anms.features.fontawesome',
+  //   github: 'https://github.com/FortAwesome/Font-Awesome',
+  //   documentation: 'https://fontawesome.com/icons'
+  // },
+  // {
+  //   name: 'Cypress',
+  //   version: env.versions.cypress,
+  //   description: 'anms.features.cypress',
+  //   github: 'https://github.com/cypress-io/cypress',
+  //   documentation: 'https://www.cypress.io/'
+  // },
+  // {
+  //   name: 'anms.features.themes.title',
+  //   description: 'anms.features.themes.description',
+  //   documentation: 'https://material.angular.io/guide/theming',
+  //   medium:
+  //     'https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1'
+  // },
+  // {
+  //   name: 'anms.features.lazyloading.title',
+  //   description: 'anms.features.lazyloading.description',
+  //   documentation:
+  //     'https://angular.io/guide/router#lazy-loading-route-configuration'
+  // }
 ];

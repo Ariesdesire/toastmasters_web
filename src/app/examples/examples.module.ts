@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtools, StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -14,8 +15,11 @@ import { ExamplesComponent } from './examples/examples.component';
 import { TodosContainerComponent } from './todos/components/todos-container.component';
 import { TodosEffects } from './todos/todos.effects';
 import { StockMarketContainerComponent } from './stock-market/components/stock-market-container.component';
+import { MeetingContainerComponent } from './meetings/components/meetings-container.component';
 import { StockMarketEffects } from './stock-market/stock-market.effects';
 import { StockMarketService } from './stock-market/stock-market.service';
+import { MeetingEffects } from './meetings/meeting.effects';
+import { MeetingService } from './meetings/meeting.service';
 import { ParentComponent } from './theming/parent/parent.component';
 import { ChildComponent } from './theming/child/child.component';
 import { CrudComponent } from './crud/components/crud.component';
@@ -30,6 +34,11 @@ import { ExamplesEffects } from './examples.effects';
   imports: [
     SharedModule,
     ExamplesRoutingModule,
+    StoreDevtoolsModule.instrument({
+      name: 'Example Demo Dev Tools',
+      maxAge: 25,
+      logOnly: environment.production
+    }),
     StoreModule.forFeature(FEATURE_NAME, reducers),
     TranslateModule.forChild({
       loader: {
@@ -42,6 +51,7 @@ import { ExamplesEffects } from './examples.effects';
     EffectsModule.forFeature([
       ExamplesEffects,
       TodosEffects,
+      MeetingEffects,
       StockMarketEffects,
       BooksEffects,
       FormEffects
@@ -51,6 +61,7 @@ import { ExamplesEffects } from './examples.effects';
     ExamplesComponent,
     TodosContainerComponent,
     StockMarketContainerComponent,
+    MeetingContainerComponent,
     ParentComponent,
     ChildComponent,
     AuthenticatedComponent,
@@ -58,7 +69,7 @@ import { ExamplesEffects } from './examples.effects';
     FormComponent,
     NotificationsComponent
   ],
-  providers: [StockMarketService]
+  providers: [StockMarketService, MeetingService]
 })
 export class ExamplesModule {
   constructor() {}

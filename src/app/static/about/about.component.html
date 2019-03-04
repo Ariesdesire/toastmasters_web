@@ -15,59 +15,66 @@
         <br>
         <span [ngClass]="routeAnimationsElements">{{ 'anms.about.check-blogs' | translate }}</span>
         <br>
-        <a mat-raised-button
-           [ngClass]="routeAnimationsElements"
-           target="_blank"
-           href="https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1">
-           <fa-icon [icon]="['fab','medium-m']"></fa-icon>
-          Material Theming
-        </a>
-        <a mat-raised-button
-           [ngClass]="routeAnimationsElements"
-           target="_blank"
-           href="https://medium.com/@tomastrajan/6-best-practices-pro-tips-for-angular-cli-better-developer-experience-7b328bc9db81">
-           <fa-icon [icon]="['fab','medium-m']"></fa-icon>
-          Angular Cli Tips
-        </a>
-        <a mat-raised-button
-           [ngClass]="routeAnimationsElements"
-           target="_blank"
-           href="https://medium.com/@tomastrajan/object-assign-vs-object-spread-in-angular-ngrx-reducers-3d62ecb4a4b0">
-           <fa-icon [icon]="['fab','medium-m']"></fa-icon>
-          Ngrx Typescript Tips
-        </a>
-        <a mat-raised-button
-           [ngClass]="routeAnimationsElements"
-           target="_blank"
-           href="https://medium.com/@tomastrajan/how-to-style-angular-application-loading-with-angular-cli-like-a-boss-cdd4f5358554">
-           <fa-icon [icon]="['fab','medium-m']"></fa-icon>
-          App Loading Style
-        </a>
+        <!--<a mat-raised-button-->
+           <!--[ngClass]="routeAnimationsElements"-->
+           <!--target="_blank"-->
+           <!--href="https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1">-->
+           <!--<fa-icon [icon]="['fab','medium-m']"></fa-icon>-->
+          <!--Material Theming-->
+        <!--</a>-->
+        <!--<a mat-raised-button-->
+           <!--[ngClass]="routeAnimationsElements"-->
+           <!--target="_blank"-->
+           <!--href="https://medium.com/@tomastrajan/6-best-practices-pro-tips-for-angular-cli-better-developer-experience-7b328bc9db81">-->
+           <!--<fa-icon [icon]="['fab','medium-m']"></fa-icon>-->
+          <!--Angular Cli Tips-->
+        <!--</a>-->
+        <!--<a mat-raised-button-->
+           <!--[ngClass]="routeAnimationsElements"-->
+           <!--target="_blank"-->
+           <!--href="https://medium.com/@tomastrajan/object-assign-vs-object-spread-in-angular-ngrx-reducers-3d62ecb4a4b0">-->
+           <!--<fa-icon [icon]="['fab','medium-m']"></fa-icon>-->
+          <!--Ngrx Typescript Tips-->
+        <!--</a>-->
+        <!--<a mat-raised-button-->
+           <!--[ngClass]="routeAnimationsElements"-->
+           <!--target="_blank"-->
+           <!--href="https://medium.com/@tomastrajan/how-to-style-angular-application-loading-with-angular-cli-like-a-boss-cdd4f5358554">-->
+           <!--<fa-icon [icon]="['fab','medium-m']"></fa-icon>-->
+          <!--App Loading Style-->
+        <!--</a>-->
       </div>
       <div class="get-started" [ngClass]="routeAnimationsElements">
         <h2 data-testid='get-started'>{{ 'anms.about.get-started' | translate }}</h2>
-        <code>git clone
-          https://github.com/tomastrajan/angular-ngrx-material-starter.git
-          new-project</code><br>
-        <code>cd new-project</code><br>
-        <code>npm install</code><br>
-        <code>npm start</code>
+        <code>For more than 86 years, Toastmasters International has been recognized as the leading organization dedicated to
+          communication and leadership skill development. Through its worldwide network of clubs, each week Toastmasters helps
+          more than a quarter million men and women of every ethnicity, education level and profession build their competence in
+          communication so they can gain the confidence to lead others. </code><br>
+        <code>The world needs leaders. Leaders head families, coach teams, run businesses and mentor others. These leaders must not only
+          accomplish; they must communicate. By regularly giving speeches, gaining feedback, leading teams and guiding others to
+          achieve their goals in a supportive atmosphere, leaders emerge from the Toastmasters program. The organization answers a
+          new generation’s plea: Where can I go to become a better communicator and ultimately, a stronger leader? </code>       <code>Toastmasters continues to build on its legacy by providing a strong foundation for the future. Its proven educational program
+        continually evolves to address the needs of the world’s communicators and leaders both today and tomorrow.  </code>       <code>Toastmasters members learn to tell their stories. They listen and answer. They plan and lead. They give feedback — and accept
+        it. Through our community of learners, they find their path to leadership. </code>
+
+
+        <br>
       </div>
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="follow-releases" [ngClass]="routeAnimationsElements">
-    <h2 rtl>{{ 'anms.about.get-notified.title' | translate }}</h2>
-    <p rtl>
-      {{ 'anms.about.get-notified.follow' | translate }} <a href="https://www.twitter.com/releasebutler" target="_blank">Release
-        Butler</a>
-      {{ 'anms.about.get-notified.description' | translate }}
-    </p>
+<!--<div class="container">-->
+  <!--<div class="follow-releases" [ngClass]="routeAnimationsElements">-->
+    <!--<h2 rtl>{{ 'anms.about.get-notified.title' | translate }}</h2>-->
+    <!--<p rtl>-->
+      <!--{{ 'anms.about.get-notified.follow' | translate }} <a href="https://www.twitter.com/releasebutler" target="_blank">Release-->
+        <!--Butler</a>-->
+      <!--{{ 'anms.about.get-notified.description' | translate }}-->
+    <!--</p>-->
 
-    <img [src]="releaseButler" alt="Release Butler tweet example">
-  </div>
-</div>
+    <!--<img [src]="releaseButler" alt="Release Butler tweet example">-->
+  <!--</div>-->
+<!--</div>-->
 <div class="container" rtl>
   <div class="contributors" [ngClass]="routeAnimationsElements">
     <h2>{{ 'anms.about.contributors.title' | translate }}</h2>
@@ -80,7 +87,7 @@
       {{ 'anms.about.contributors.description4' | translate }}
       <a href="https://github.com/tomastrajan/angular-ngrx-material-starter/blob/master/CONTRIBUTING.md" target="_blank">{{'anms.about.contributors.guide'
         | translate}}</a>
-      ...
+   Lets have fun accomplishing your goals.
     </p>
 
     <div class="contributors-wrapper">
@@ -230,52 +237,7 @@
   </a>
 
 
-  <a class="contributor" href="http://vishalsodani.com" target="_blank">
-    <img src="https://avatars1.githubusercontent.com/u/364183?v=4">
-    <span>Vishal Sodani</span>
-  </a>
 
-
-  <a class="contributor" href="https://github.com/kosmas58" target="_blank">
-    <img src="https://avatars2.githubusercontent.com/u/43474?v=4">
-    <span>Kosmas Schütz</span>
-  </a>
-
-
-  <a class="contributor" href="https://github.com/huyen1990" target="_blank">
-    <img src="https://avatars2.githubusercontent.com/u/44722180?v=4">
-    <span>huyen1990</span>
-  </a>
-
-
-  <a class="contributor" href="https://medium.com/@chauey" target="_blank">
-    <img src="https://avatars3.githubusercontent.com/u/5130533?v=4">
-    <span>Chau (Joe) Nguyen</span>
-  </a>
-
-
-  <a class="contributor" href="https://www.amadousall.com/" target="_blank">
-    <img src="https://avatars0.githubusercontent.com/u/8947112?v=4">
-    <span>Amadou Sall</span>
-  </a>
-
-
-  <a class="contributor" href="https://github.com/dino" target="_blank">
-    <img src="https://avatars3.githubusercontent.com/u/26004739?v=4">
-    <span>Dino</span>
-  </a>
-
-
-  <a class="contributor" href="https://github.com/Doehl" target="_blank">
-    <img src="https://avatars0.githubusercontent.com/u/1913751?v=4">
-    <span>Mathias Døhl</span>
-  </a>
-
-
-  <a class="contributor" href="http://www.carlintveld.nl" target="_blank">
-    <img src="https://avatars2.githubusercontent.com/u/6196260?v=4">
-    <span>Carl in 't Veld</span>
-  </a>
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
     </div>

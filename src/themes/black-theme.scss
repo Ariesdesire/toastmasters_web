@@ -1,7 +1,103 @@
-$anms-black-primary: mat-palette($mat-grey, 700, 300, 900);
-$anms-black-accent: mat-palette($mat-blue-grey, 400);
-$anms-black-warn: mat-palette($mat-red, 500);
-
+$md-grey: (
+  50: #f5f6f6,
+  100: #e5e8e8,
+  200: #d4d9d8,
+  300: #c3c9c8,
+  400: #b6bebd,
+  500: #a9b2b1,
+  600: #a2abaa,
+  700: #98a2a1,
+  800: #8f9998,
+  900: #7e8a88,
+  A100: #ffffff,
+  A200: #e4fdf9,
+  A400: #affff2,
+  A700: #96ffed,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+$yellow: #f2df74;
+$md-yellow: (
+  50: #fdfbee,
+  100: #fbf5d5,
+  200: #f9efba,
+  300: #f6e99e,
+  400: #f4e489,
+  500: #f2df74,
+  600: #f0db6c,
+  700: #eed761,
+  800: #ecd257,
+  900: #e8ca44,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #fff7d5,
+  A700: #fff2bc,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+$md-red: (
+  50: #f9e4e6,
+  100: #f0bcc0,
+  200: #e69096,
+  300: #dc636b,
+  400: #d5414c,
+  500: #cd202c,
+  600: #c81c27,
+  700: #c11821,
+  800: #ba131b,
+  900: #ae0b10,
+  A100: #ffdbdc,
+  A200: #ffa8aa,
+  A400: #ff7578,
+  A700: #ff5c5f,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+$anms-black-primary: mat-palette($md-yellow, 500);
+$anms-black-accent: mat-palette($md-grey, 500);
+$anms-black-warn: mat-palette($md-red, 500);
 $anms-black-theme: mat-dark-theme(
   $anms-black-primary,
   $anms-black-accent,

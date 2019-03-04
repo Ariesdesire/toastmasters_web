@@ -21,11 +21,11 @@ import { selectSelectedBook, selectAllBooks } from '../books.selectors';
 export class CrudComponent {
   routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;
 
-  bookFormGroup = this.fb.group(CrudComponent.createBook());
   books$: Observable<Book[]> = this.store.pipe(select(selectAllBooks));
   selectedBook$: Observable<Book> = this.store.pipe(select(selectSelectedBook));
 
   isEditing: boolean;
+  bookFormGroup = this.fb.group(CrudComponent.createBook());
 
   static createBook(): Book {
     return {
